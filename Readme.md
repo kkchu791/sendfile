@@ -11,3 +11,10 @@ The copy way took 155.834µs to run.
 
 The zero copy way took 27.25µs to run.
 ```
+
+
+Instead of 
+disk -> kernel buffer -> user space -> socket buffer -> NIC
+
+with `sendfile` sycall on linux
+disk -> kernel buffer -> NIC
